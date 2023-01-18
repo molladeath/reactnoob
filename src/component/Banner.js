@@ -6,38 +6,16 @@ import { Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
 import "swiper/css/pagination";
 import mbanner from "./css/mbanner.module.css";
-
+import bannerdb from "./json/bannerdb.json"
+import {Link} from 'react-router-dom';
 
 function Banner(props) {
-    const bannerdb = {
-        mainBanner :[
-            {
-                title : ['h2태그에 삽입되는 큰 타이틀','p태크에 들어가는 설명문구'],
-                type : 'a',
-                href : ['http://www.github.com', '_black'],
-                cls : ['event','bg-light']
-            },
-            {
-                title : ['두번째기획배너이름','작은 설명문구'],
-                type : 'Link',
-                href : ['/promotion2', ''],
-                cls : ['project','bg-danger']
-            },
-            {
-                title : ['세번째기획배너이름','작은 설명문구'],
-                type : 'Link',
-                href : ['/promotion3', ''],
-                cls : ['project','bg-info']
-            }
-        ]
-    }
-
-
-
+    
     return (
         <div id={props.objid} className='h-100'>
             <Swiper
         modules={[ Pagination, Autoplay]}
+        loop={true}
         spaceBetween={50}
         slidesPerView={2}
         centeredSlides={true}
@@ -48,13 +26,12 @@ function Banner(props) {
         pagination={{
             type : "fraction"
         }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
+        
         >
      {
-        bannerdb.mainBanner.map((value,index)=>{
+        bannerdb.mainBanner.map((value,idx)=>{
             return (
-                <SwiperSlide className={mbanner.item +" "+value.cls.join(" ")}>
+                <SwiperSlide key={'sw'+idx } className={mbanner.item +" "+value.cls.join(" ")}>
                 <div>
                     <h2>
                         {value.title[0]}
@@ -62,6 +39,11 @@ function Banner(props) {
                     <p>
                         {value.title[1]}
                     </p>
+                    {
+                      value.type == 'a' ? 
+                        <a href={value.href[0]} target={value.href[1]}>바로가기</a> : 
+                        <Link to={value.href[0]}>바로가기</Link>  
+                    }
                 </div>
             </SwiperSlide>
         )
