@@ -1,35 +1,63 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
-function Qna(props) {
+const Qna = () => {
+  const { 
+    
+    handleSubmit,
+    
+    register, 
 
-    const[password , setPassword]=useState("");
-    const[statue, updateStatue] = useState(false);
+    formState: { errors } } = useForm();
 
-    const changePw=({target :{value}})=> setPassword(value);
-    const sendForm= async (e)=>{
-        // 폼태그는 기본적으로 새로고침한다.
-        // 폼태그가 중복 실행되지 않도록 막아야 한다.
-        updateStatue(true);//버튼 막아
-        e = e || window.event;
-        e.preventDefault();//싱글페이지 새로고침 막아버림
-        await new Promise( (r)=> setTimeout(r,1000)       )
-        alert(`수정된 비밀번호 확인해보기 ${password}`)
-        updateStatue(false);
-    }
+   
+    const onSubmit = values => console.log(values);
+
+
+    
 
     return (
-        <div id='qna' className='py-5'>
+        <div id="qna" className='py-5 col-6 mx-auto'>
             <h2 className='text-center py-5'>문의하기</h2>
-            <form onSubmit={sendForm} className='col-6 mx-auto'>
-                <input type='password' 
-                       value={password} 
-                       name='pw'
-                       onChange={changePw}
-                       />
-                <button type='submit' disabled={statue}>변경하기</button>
-            </form> 
-            
-        </div>
+
+      <form onSubmit={handleSubmit(onSubmit)}>
+      <ul>
+        <li className='mb-2 '>
+          <input
+          placeholder='이메일'
+          className='w-100 d-block'
+          type="email"
+          {...register("email", {
+            required: "Required",
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: "invalid email address"
+            }
+          })}
+        />
+        {/* formState 의 설정해둔 errors의 이메일에러 메세지출력 */}        
+        {errors.email && errors.email.message}
+        </li>
+        <li className='mb-2 '>
+          <input
+          placeholder='이름'
+          className='w-100 d-block'
+          {...register("username", {
+            validate: value => value !== "admin" || "Nice try!"
+          })}
+        />
+        {errors.username && errors.username.message}
+        </li>
+      </ul>
+      <p className='d-flex justify-content-end'>
+        <button type="submit">보내기</button>
+      </p>
+      
+    </form>
+
+          
+          
+  </div>
     );
 }
 

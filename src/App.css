@@ -38,3 +38,6 @@ body{
 .lightmode{background-color: white;}
 .lightmode a{color: #333 !important;}
 
+li a.active{
+  color: red;
+}

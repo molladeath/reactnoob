@@ -7,3 +7,7 @@ li{list-style: none;}
 .hd a{ padding: 0 1rem;}
 
 .hd h1 img{ height: 4rem; display: block;}
+
+.active{
+    color: red;
+}
