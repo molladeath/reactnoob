@@ -2,22 +2,22 @@
    
    "mainBanner" :[
         {
-            "title" : ["h2태그에 삽입되는 큰 타이틀","p태크에 들어가는 설명문구"],
+            "title" : ["자유민주주의경제의 폐혜","영생군주 천상대제의 경제학"],
             "type" : "a",
             "href" : ["http://www.github.com", "_black"],
-            "cls" : ["event","bg-light"]
+            "cls" : ["event","bg-warning"]
         },
         {
-            "title" : ["두번째기획배너이름","작은 설명문구"],
+            "title" : ["당신도 부자가 될 수 있다","돈이 돈을 부른다"],
             "type" : "Link",
             "href" : ["/promotion2", ""],
             "cls" : ["project","bg-danger"]
         },
         {
-            "title" : ["세번째기획배너이름","작은 설명문구"],
+            "title" : ["불신 지옥","현세의 지옥과 천상대제의 은혜로움"],
             "type" : "Link",
             "href" : ["/promotion3", ""],
-            "cls" : ["project","bg-info"]
+            "cls" : ["project","bg-success"]
         }
     ]
 }

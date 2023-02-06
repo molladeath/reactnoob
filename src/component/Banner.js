@@ -15,7 +15,6 @@ function Banner(props) {
         <div id={props.objid} className='h-100'>
             <Swiper
         modules={[ Pagination, Autoplay]}
-        loop={true}
         spaceBetween={50}
         slidesPerView={2}
         centeredSlides={true}

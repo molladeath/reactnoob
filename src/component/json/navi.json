@@ -1,19 +1,19 @@
 {
     "nav" : [
         {
-            "title": "뇌새김소개",
+            "title": "멀티플로우네트워크",
             "href": "#top"
         },
         {
-            "title": "뇌새김의 학습원리",
+            "title": "등급별 혜택안내",
             "href": "#procss"
         },
         {
-            "title": "뇌새김의 후기",
+            "title": "다이등급의 후기",
             "href": "#review"
         },
         {
-            "title": "문의하기",
+            "title": "가입하기",
             "href": "#qna"
         }
     ]

@@ -48,15 +48,15 @@ import navijson from './json/navi.json';
         </Scrollspy>
             <ul id="sns" className='d-flex'>
                 <li>
-                    <a href="http://www.youtube.com" target="_blank">유튜브</a>
+                    <a href="http://www.youtube.com/results?search_query=천태국" target="_blank">천상대제 귀염뽀짝 V로그</a>
                 </li>
                 <li>
-                    <a href="http://www.youtube.com" target="_blank">자료실</a>
+                    <a href="http://www.youtube.com" target="_blank">후원하기</a>
                 </li>
                 <li>
                     <button onClick={ () =>{
                         updataColor(!colorMode)
-                    }}> { colorMode ? '다크' : '라이트' }</button>
+                    }}> { colorMode ? '누르시오' : '놀랐지?' }</button>
                 </li>
             </ul>  
 

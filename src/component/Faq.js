@@ -5,7 +5,7 @@ function Faq(props) {
     
     return (
         <div id='faq' className='container py-5'>
-            <h2 className='text-center pt-5 pb-3'>묻고 답하기</h2>
+            <h2 className='text-center pt-5 pb-3'>자주 묻는 질문</h2>
 
             <ul className='border col-8 mx-auto p-4'>
 

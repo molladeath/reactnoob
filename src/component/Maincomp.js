@@ -9,7 +9,7 @@ function maincomp(props) {
             <Banner objid='maincomp'></Banner>
             <div>
                 <Faq></Faq>
-                <div style={{height : '100vh'}} id='review' className='border-top bg-dark'></div>
+                <div style={{height : '100vh'}} id='review' className='border-top bg-secondary'></div>
                 <Qna></Qna>
                 
             </div>

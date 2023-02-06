@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Navi></Navi>
         <Routes>
-          <Route path='/about' element={<h2>회사소개컴포넌트노출하기</h2>}></Route>
+          <Route path='/about' element={<h2>영생군주천상대제불신지옥</h2>}></Route>
           <Route path='/' element={<Maincomp></Maincomp>}></Route>
         </Routes>
       
