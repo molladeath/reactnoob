@@ -15,13 +15,14 @@ function Banner(props) {
         <div id={props.objid} className='h-100'>
             <Swiper
         modules={[ Pagination, Autoplay]}
+        loop={true}
         spaceBetween={50}
         slidesPerView={2}
         centeredSlides={true}
-        autoplay={{
+         autoplay={{
             delay: 2500,
             disableOnInteraction: false,
-        }}
+         }}
         pagination={{
             type : "fraction"
         }}
@@ -31,17 +32,17 @@ function Banner(props) {
         bannerdb.mainBanner.map((value,idx)=>{
             return (
                 <SwiperSlide key={'sw'+idx } className={mbanner.item +" "+value.cls.join(" ")}>
-                <div>
+                <div className='mt-4'>
                     <h2>
                         {value.title[0]}
                     </h2>
-                    <p>
+                    <p className='mb-5'>
                         {value.title[1]}
                     </p>
                     {
                       value.type == 'a' ? 
-                        <a href={value.href[0]} target={value.href[1]}>바로가기</a> : 
-                        <Link to={value.href[0]}>바로가기</Link>  
+                        <a href={value.href[0]} target={value.href[1]}><h3>경제 바로알기</h3></a> : 
+                        <Link to={value.href[0]}><h3 className=''>바로가기</h3></Link>  
                     }
                 </div>
             </SwiperSlide>

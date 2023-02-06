@@ -11,13 +11,13 @@
             "title" : ["당신도 부자가 될 수 있다","돈이 돈을 부른다"],
             "type" : "Link",
             "href" : ["/promotion2", ""],
-            "cls" : ["project","bg-danger"]
+            "cls" : ["project","bg-danger","text-warning"]
         },
         {
             "title" : ["불신 지옥","현세의 지옥과 천상대제의 은혜로움"],
             "type" : "Link",
             "href" : ["/promotion3", ""],
-            "cls" : ["project","bg-success"]
+            "cls" : ["project","bg-success","text-danger"]
         }
     ]
 }
