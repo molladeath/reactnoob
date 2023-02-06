@@ -5,19 +5,22 @@
             "title" : ["자유민주주의경제의 폐혜","영생군주 천상대제의 경제학"],
             "type" : "a",
             "href" : ["http://www.github.com", "_black"],
-            "cls" : ["event","bg-warning"]
+            "cls" : ["event","bg-warning"],
+            "atext" : "바로가기"
         },
         {
             "title" : ["당신도 부자가 될 수 있다","돈이 돈을 부른다"],
             "type" : "Link",
             "href" : ["/promotion2", ""],
-            "cls" : ["project","bg-danger","text-warning"]
+            "cls" : ["project","bg-danger","text-warning"],
+            "atext" : "더 자세히"
         },
         {
             "title" : ["불신 지옥","현세의 지옥과 천상대제의 은혜로움"],
             "type" : "Link",
             "href" : ["/promotion3", ""],
-            "cls" : ["project","bg-success","text-danger"]
+            "cls" : ["project","bg-success","text-danger"],
+            "atext" : "더보기"
         }
     ]
 }

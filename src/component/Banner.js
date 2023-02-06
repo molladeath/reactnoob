@@ -41,8 +41,8 @@ function Banner(props) {
                     </p>
                     {
                       value.type == 'a' ? 
-                        <a href={value.href[0]} target={value.href[1]}><h3>경제 바로알기</h3></a> : 
-                        <Link to={value.href[0]}><h3 className=''>바로가기</h3></Link>  
+                        <a href={value.href[0]} target={value.href[1]}><h3>{value.atext}</h3></a> : 
+                        <Link to={value.href[0]}><h3 className=''>{value.atext}</h3></Link>  
                     }
                 </div>
             </SwiperSlide>

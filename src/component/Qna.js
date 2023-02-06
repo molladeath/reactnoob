@@ -18,7 +18,7 @@ const Qna = () => {
 
     return (
         <div id="qna" className='py-5 col-6 mx-auto'>
-            <h2 className='text-center py-5'>문의하기</h2>
+            <h2 className='text-center py-5'>가입하기</h2>
 
       <form onSubmit={handleSubmit(onSubmit)}>
       <ul>
@@ -50,7 +50,7 @@ const Qna = () => {
         </li>
       </ul>
       <p className='d-flex justify-content-end'>
-        <button type="submit">보내기</button>
+        <button type="submit">전재산 기부하기</button>
       </p>
       
     </form>
